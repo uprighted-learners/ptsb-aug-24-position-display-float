@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent-container {
+    /* position: relative; */
+
+    background-color: beige;
+    border: 2px solid black;
+    width: 75vw;
+    height: 275vw;
+    padding: 5px;
+}
+
+.child {
+    padding: 25px;
+}
+
+/* 
+    ? Static
+    * default
+    * positiioned in relation to elements
+    * top, bottom, left, right, and z-index have NO effect
+*/
+
+.child1 {
+    position: static;
+    /* top: 250px;
+    right: 250px; */
+    border: 2px solid red;
+    background-color: red;
+}
+
+/* 
+    ? Relative
+    * just like static
+    * can be changed using top, bottom, left, right, and z-index
+    * values are relative to its original static position
+*/
+
+.child2 {
+    position: relative;
+    /* top: 25px;
+    left: 25px; */
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+}
+
+/* 
+    ? Absolute
+    * removes the lement from the flow
+    * positions it relative to parent container
+    * if parent is static, it will move outside of the parent container
+    * if parent is relative, it will move within the parent container
+    * positioning defined by top, bottom, left, right, and z-index
+*/
+
+.child3 {
+    /* position: absolute; */
+    /* z-index: -1; */
+    top: 0px;
+    left: 0px;
+    border: 2px solid green;
+    background-color: green;
+}
+
+/* 
+    ? Fixed
+    * like absolute
+    * positioned to viewport
+    * doesn't move when scrolling
+    * position defined by top, bottom, left, right, and z-index
+*/
+.child4 {
+    /* position: fixed; */
+    top: 0px;
+    left: 0px;
+    border: 2px solid teal;
+    background-color: teal;
+}
+
+/* 
+    ? Sticky
+    * mix of relative and fixed
+    * relative to the flow
+    * position definition used for when you start scrolling
+    * stays fixed when scrolling; relative when stationary
+*/
+
+.child5 {
+    position: sticky;
+    top: 100px;
+    border: 2px solid gray;
+    background-color: gray;
+}
+
+/* 
+    ? Display Property
+    * treats an element as block or inline
+    * block is created top-bottom; spans full page width
+    * inline is created side-by-side; spans width of its content
+*/
+
+.display-container {
+    margin-top: 2em;
+}
+
+.block-container {
+    border: 2px solid black;
+    margin: 5px;
+
+    display: inline;
+}
+
+.inline-element {
+    /* display: block; */
+}
+
+.inline-block {
+    border: 2px solid black;
+    margin: 5px;
+
+    display: inline-block;
+    width: 250px;
+}
+
+/* 
+    ? Float
+    * shifts element left or right
+*/
+
+.float-container {
+    margin-top: 2em;
+    border: 2px solid blue;
+    width: 50vw;
+    height: 25vw;
+}
+
+.float-box {
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    background-color: rebeccapurple;
+    color: white;
+
+    float: right;
+}
